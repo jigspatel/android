@@ -201,6 +201,9 @@
         <activity
             android:name="com.common.example.DownloadActivity"
             android:label="@string/title_activity_download"/>
+        <activity
+            android:name="com.common.example.TodoActivity"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name="com.common.utils.MaterialLibrariesListActivity"

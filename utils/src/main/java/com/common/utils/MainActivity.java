@@ -44,6 +44,7 @@ import com.common.example.SendLocatoNotificationAct;
 import com.common.example.SetPrefAct;
 import com.common.example.StringToDateActivity;
 import com.common.example.ToastActivity;
+import com.common.example.TodoActivity;
 import com.common.example.UrlValidationRippleActivity;
 import com.common.example.ValidationAct;
 import com.common.example.VerticalTextViewsActivity;
@@ -112,7 +113,8 @@ public class MainActivity extends Activity {
                 "Contacts with email id & screenshot",/* 44 */
                 "Social integration",/* 45 */
                 "Pick color",/* 46 */
-                "Remote file size or download file"/* 47 */
+                "Remote file size or download file",/* 47 */
+                "Todo list"/* 48 */
         };
 
         sdkFunctionalityList = (ListView) findViewById(R.id.Md_list_company);
@@ -214,15 +216,12 @@ public class MainActivity extends Activity {
                 break;
             case 20:
                 intent = new Intent(mContext, FileCountActivity.class);
-//                tvText.setText("Total " + Common.getFileCounts("jpg", Environment.getExternalStorageDirectory().getPath()) + " JPG file's");
                 break;
             case 21:
                 intent = new Intent(mContext, DateDifferenceActivity.class);
-//                tvText.setText("Difference is " + Common.calculateDays(new Date("1/12/2014"), new Date("1/12/2015")));
                 break;
             case 22:
                 intent = new Intent(mContext, StringToDateActivity.class);
-//                tvText.setText("Date in milliseconds : " + Common.stringToDate("01/12/2014", "dd/MM/yyyy").getTime());
                 break;
             case 23:
                 Common.showAlertDialog(this, getString(R.string.app_name), "Your device height is: " + Common.getDeviceHeight(mContext) + ".", false);
@@ -250,7 +249,6 @@ public class MainActivity extends Activity {
                 break;
             case 31:
                 intent = new Intent(mContext, VolumeActivity.class);
-//                Common.showAlertDialog(mContext, getString(R.string.app_name), "In Development", false);
                 break;
             case 32:
                 intent = new Intent(mContext, SaveImageInPreference.class);
@@ -272,14 +270,12 @@ public class MainActivity extends Activity {
                 break;
             case 37:
                 intent = new Intent(mContext, ChooseProfileActivity.class);
-//                Common.chooseProfile(mContext, 0); // 0= Silent , 1= Vibrate , 2 = Normal
                 break;
             case 38:
                 intent = new Intent(mContext, RoundedBitmapActivity.class);
                 break;
             case 39:
                 intent = new Intent(mContext, ToastActivity.class);
-//                Common.showAlertDialog(mContext, "", "Test Toast", true);
                 break;
             case 40:
                 intent = new Intent(mContext, PreventClickActivity.class);
@@ -297,7 +293,6 @@ public class MainActivity extends Activity {
                 intent = new Intent(mContext, EmailContactsScreenShotActivity.class);
                 break;
             case 45:
-//                intent = new Intent(mContext, com.common.example.CommonActivity.class);
                 Common.showAlertDialog(mContext, getString(R.string.app_name), "Coming soon.", false);
                 break;
             case 46:
@@ -305,6 +300,9 @@ public class MainActivity extends Activity {
                 break;
             case 47:
                 intent = new Intent(mContext, DownloadActivity.class);
+                break;
+            case 48:
+                intent = new Intent(mContext, TodoActivity.class);
                 break;
         }
         if (intent != null)
